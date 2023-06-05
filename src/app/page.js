@@ -1,4 +1,6 @@
-import Results from "@/components/Results";
+// Fix the problem for "search params object is empty in production with next 13 app dir"
+// for more info "https://github.com/vercel/next.js/issues/43077"
+export const dynamic = "force-dynamic"; // this is the fiximport Results from "@/components/Results";
 
 const API_KEY = process.env.API_KEY;
 

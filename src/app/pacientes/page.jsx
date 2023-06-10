@@ -18,15 +18,8 @@ export default function Pacientes () {
                 <Paciente />
             </div>
 
-
-
-
-
-
-
-
+            <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 
         </div>
-        
     )
 }

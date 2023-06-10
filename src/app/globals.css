@@ -8,4 +8,11 @@ html::-webkit-scrollbar {
 
 html {
     scrollbar-width: none;
+    min-height: 844px;
+}
+
+.introTxt {
+    font-size: 14px;
+    line-height: 19px;
+    color: #64748B;
 }

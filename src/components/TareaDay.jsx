@@ -1,10 +1,9 @@
 import Tarea from "./Tarea";
 
 export default function TareaDay({dia, fecha, eventos}) {
-    const cantidad = eventos;
     const events = [];
   
-    for (let i = 0; i < cantidad; i++) {
+    for (let i = 0; i < eventos; i++) {
       events.push(<Tarea key={i} />);
     }
 

@@ -37,7 +37,7 @@ export default function EditAgenda ({params}) {
             <div className="my-3">
                 <Card tipo='tutor' titulo='Ixchel True Orozco' subtitulo='Tutor' liga={`/tutores/${Math.floor(Math.random() * 10) + 1}`} />
                 <Card tipo='paciente' titulo='Toto' subtitulo='Ixchel True Orozco' liga={`/pacientes/${Math.floor(Math.random() * 10) + 1}`} />
-                <Card tipo='vet' titulo='Karla Ulloa' subtitulo='Administrador General' liga='#' />
+                <Card tipo='vet' titulo='Karla Ulloa' subtitulo='Administrador General' liga='/perfil' />
                 <Card tipo='anamnesis' titulo='Anamnesis' subtitulo='' liga='#' />
             </div>
             <CardContainer>

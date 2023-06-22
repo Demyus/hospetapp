@@ -75,9 +75,9 @@ export default function Page ({params}) {
                     </CardContainer>
 
                     <Encabezado title='Pacientes' />
-                    <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='#' />
-                    <Card tipo='paciente' titulo='Nombre Paciente' subtitulo='Nombre del Tutor' liga='#' />
-                    <Card tipo='paciente' titulo='Roquefort' subtitulo='Nombre del Tutor' liga='#' />
+                    <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga={`/pacientes/${Math.floor(Math.random() * 10) + 1}`} />
+                    <Card tipo='paciente' titulo='Nombre Paciente' subtitulo='Nombre del Tutor' liga={`/pacientes/${Math.floor(Math.random() * 10) + 1}`} />
+                    <Card tipo='paciente' titulo='Roquefort' subtitulo='Nombre del Tutor' liga={`/pacientes/${Math.floor(Math.random() * 10) + 1}`} />
 
                     <Encabezado title='Tareas' />
                     <Title title='Junio' />

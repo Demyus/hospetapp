@@ -46,25 +46,28 @@ export default function Page ({params}) {
                     <Tab.Panel className='bg-[#F6F8F9]'>
 
                         <CardContainer>
-                            
-                            <div className="flex">
-                                <div className="mr-4">
-                                    <Image src={'/placeholder3.png'} alt='Foto Perfil' width={110} height={110} />
-                                    <button onClick={edit} className="text-sm rounded-md bg-hospMorado text-white px-2 py-1 mt-2 mx-auto">Editar Perfil</button>
+                            <div className="w-full">
+                                    <Image className='right-3 top-1 absolute' src={'/placeholder3.png'} alt='Foto Perfil' width={110} height={110} />
+                                    <h1 className="font-bold text-xl text-hospMorado">Roquefort</h1>
+                                    <p className="text-sm"><span className="font-bold">Especie:</span> Felino</p>
+                                    <p className="text-sm"><span className="font-bold">Raza:</span> Taby</p>
+                                    <p className="text-sm"><span className="font-bold">Color:</span> Naranja</p>
+                                    <p className="text-sm"><span className="font-bold">Sexo:</span> Macho</p>
+                                <div className='flex justify-between'>
+                                    <div>
+                                        <p className="text-sm"><span className="font-bold">Peso:</span> 5 kg</p>
+                                        <p className="text-sm"><span className="font-bold">Esterilizado:</span> Sí</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm"><span className="font-bold">Sangre:</span> A+</p>
+                                        <p className="text-sm"><span className="font-bold">Edad:</span> 2 años</p>    
+                                    </div>                                    
+                                    <div>
+                                        <p className="text-sm"><span className="font-bold">Donador:</span> Sí</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h1 className="font-bold text-hospMorado">Roquefort</h1>
-                                    <p className="text-sm">
-                                        <span className="font-bold">Teléfono:</span><br/> (646) 176 5692
-                                    </p>
-                                    <p className="text-sm">
-                                        <span className="font-bold">Celular:</span><br/> (646) 484 2981
-                                    </p>
-                                    <p className="text-sm">
-                                        <span className="font-bold">Correo:</span><br/>
-                                        ixchel.true.orozco@gmail.com
-                                    </p>
-                                </div>
+                                <p className="text-sm"><span className="font-bold">Señas particulares:</span> Es un hermoso</p>
+                                <button onClick={edit} className="text-sm rounded-md bg-hospMorado text-white px-2 py-1 mt-2 mx-auto">Editar Perfil</button>
                             </div>
                         </CardContainer>
                         
@@ -92,9 +95,19 @@ export default function Page ({params}) {
                     </Tab.Panel>
 
                     <Tab.Panel className='bg-[#F6F8F9]'>
-
+                        <Encabezado title='Agenda' />
                         <Title title='Mayo' />
-                        <DocumentoDay dia='MAR' fecha='17' eventos='2' />
+                        <DocumentoDay dia='MAR' fecha='17' eventos='1' />
+
+                        <Encabezado title='Vacunas' />
+                        <Title title='Junio' />
+                        <TareaDay dia='MAR' fecha='17' eventos='1' />
+
+                        <Encabezado title='Desparasitaciones' />
+                        <Title title='Junio' />
+                        <TareaDay dia='MAR' fecha='17' eventos='1' />
+                        <TareaDay dia='MAR' fecha='18' eventos='1' />
+                        <TareaDay dia='MAR' fecha='19' eventos='1' />
 
                         <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 

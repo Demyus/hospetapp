@@ -11,7 +11,7 @@ import {TbUser} from 'react-icons/tb';
 export default function Nav () {
 
     return (
-        <div className="flex justify-between md:hidden w-full bg-hospGrey1 max-w-6xl sm:mx-auto items-center py-6 fixed bottom-0 border-t border-hospBorderGrey1">
+        <div className="flex justify-between md:hidden w-full bg-hospGrey1 max-w-6xl sm:mx-auto items-center py-6 fixed bottom-0 border-t border-hospBorderGrey1 z-50">
             <div className="flex justify-evenly flex-nowrap w-full">
                 <MenuItem title={'Agenda'}     address={'/agenda'}     Icon={IoCalendarClearOutline} />
                 <MenuItem title={'Pacientes'}  address={'/pacientes'}  Icon={IoPawOutline} />

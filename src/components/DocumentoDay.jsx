@@ -1,13 +1,13 @@
 import Event from "./Event";
 
-export default function AgendaDay({dia, fecha, eventos}) {
+export default function DocumentoDay({dia, fecha, eventos}) {
     const cantidad = eventos;
     const events = [];
   
     for (let i = 0; i < cantidad; i++) {
       events.push(<Event key={`event${i}`} 
-      titulo='Hidratación Morusa' 
-      subtitulo='8:00am - 9:00am' 
+      titulo='Reporte Sangre' 
+      subtitulo='PDF' 
       usuario='Karla' 
       liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />);
     }

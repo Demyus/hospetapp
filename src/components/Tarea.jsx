@@ -1,16 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Event ({titulo, subtitulo, usuario, liga}) {
-
+export default function Tarea ({data}) {
     return (
         <div className="cursor-pointer px-3 py-2 mb-2 rounded-md group hover:bg-amber-300 border border-gray-200  shadow-md bg-white">
-            <Link href={liga}>
-                <h2 className="truncate font-bold">{titulo}</h2>
+            <Link href={`#`}>
+                <h2 className="truncate text-lg font-bold">Hidratación Morusa</h2>
                 <div className="">
-                    <span className="">{subtitulo}</span>
+                    <span className="">8:00am </span>
                     <span className="float-right inline">
-                    {usuario}
+                    Karla
                     <Image 
                     src={`/placeholder.png`} width={24} height={24} 
                     className="ml-2 inline" 

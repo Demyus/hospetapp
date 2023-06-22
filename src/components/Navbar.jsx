@@ -10,6 +10,9 @@ import {TbUser} from 'react-icons/tb';
 import {TfiSettings} from 'react-icons/tfi';
 import {TfiHelpAlt} from 'react-icons/tfi';
 import {RxExit} from 'react-icons/rx';
+import {IoChevronBackOutline} from 'react-icons/io5';
+
+import Link from 'next/link';
 
 const user = {
   name: 'Tom Cook',
@@ -24,7 +27,7 @@ const navigation = [
   { name: 'Usuarios', href: '/usuarios', current: false },
 ]
 const userNavigation = [
-  { name: 'Ver Perfil', href: '#', icon: TbUser  },
+  { name: 'Ver Perfil', href: '/perfil', icon: TbUser  },
   { name: 'Opciones',   href: '#', icon: TfiSettings  },
   { name: 'Ayuda',      href: '#', icon: TfiHelpAlt  },
 ]
@@ -37,11 +40,26 @@ export default function Navbar({title}) {
   const loggedIn = useSelector(state => state.sessionSlice);
   const dispatch = useDispatch();
   const router = useRouter();
+  let showBack = false;
 
   let sectionTitle = title.split('');
   sectionTitle.shift();  
   if(sectionTitle[0]) { sectionTitle[0] = sectionTitle[0].toUpperCase(); }
   sectionTitle = sectionTitle.join('');
+  sectionTitle = sectionTitle.split('/');
+  if(sectionTitle[1]) {
+    showBack = true;
+  }
+  sectionTitle = sectionTitle[0];
+
+  const BackButton = () => {
+    return (
+      <button onClick={() => router.back()}>
+        <IoChevronBackOutline className='text-2xl inline' />
+      </button>
+    )
+  }
+
 
   const logOff = () => {
     dispatch(sessionActions.logOff());
@@ -57,12 +75,12 @@ export default function Navbar({title}) {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <h1 className='text-2xl font-bold'>{sectionTitle}</h1>
+                      <h1 className='text-2xl font-bold'>{showBack && BackButton() } {sectionTitle}</h1>
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 items-baseline space-x-4 hidden md:flex">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className={classNames(
@@ -74,7 +92,7 @@ export default function Navbar({title}) {
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -118,7 +136,7 @@ export default function Navbar({title}) {
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <a
+                                  <Link
                                     href={item.href}
                                     className={classNames(
                                       active ? 'bg-gray-100' : '',
@@ -127,14 +145,14 @@ export default function Navbar({title}) {
                                   >
                                   <item.icon className='inline mr-2' /> 
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 )}
                               </Menu.Item>
                             ))}
                               <Menu.Item key='logOffBtn'>
-                                  <a href='#' onClick={logOff} className='block px-4 py-2 text-sm text-gray-700'>
+                                  <Link href='#' onClick={logOff} className='block px-4 py-2 text-sm text-gray-700'>
                                    <RxExit className='inline mr-2' /> Cerrar Sesión
-                                  </a>
+                                  </Link>
                               </Menu.Item>
                           </Menu.Items>
                         </Transition>

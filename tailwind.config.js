@@ -11,6 +11,8 @@ module.exports = {
     colors: { 
       ...colors,
       hospMorado: '#592893',
+      hospVerde: '#30A49B',
+      hospDark: '#252C32',
       hospGrey1: '#F9F9F9F0',
       hospBorderGrey1: '#ADAEAF',
      },

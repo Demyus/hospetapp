@@ -13,7 +13,6 @@ async function searchMovies(searchTerm) {
 export default async function SearchPage({params}) {
     const results = await searchMovies(params.searchTerm);
 
-
     return (
         <div>
             { results && results.length === 0 && (

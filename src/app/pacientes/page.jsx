@@ -1,6 +1,6 @@
 'use client';
 import AddButton from "@/components/AddButton";
-import Paciente from "@/components/Paciente";
+import Card from "@/components/Card";
 
 export default function Pacientes () {
     return (
@@ -11,11 +11,14 @@ export default function Pacientes () {
             </div>
 
             <div className="pt-16">
-                <Paciente />
-                <Paciente />
-                <Paciente />
-                <Paciente />
-                <Paciente />
+                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Nombre Paciente' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Roquefort' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Morusa' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Kinny' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Sofi' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Ivette' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='#' />
             </div>
 
             <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>

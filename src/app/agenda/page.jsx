@@ -42,7 +42,7 @@ export default function Page () {
                     <AgendaDay dia='Sab' fecha='21' eventos='3' />
                     <AgendaDay dia='Dom' fecha='22' eventos='3' />
 
-                        <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
+                    <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 
                     </Tab.Panel>
                     <Tab.Panel className='bg-[#F6F8F9]'>

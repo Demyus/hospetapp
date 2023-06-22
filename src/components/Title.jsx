@@ -2,7 +2,7 @@
 
 export default function Title({title}) {
     return (
-        <div className='flex flex-nowrap mb-3'>
+        <div className='flex flex-nowrap py-3'>
             <div className='mr-3'>
                 <h2 className='uppercase -mt-2 text-slate-400 font-bold'>{title}</h2>
             </div>

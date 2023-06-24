@@ -4,9 +4,8 @@ import AddButton from '@/components/AddButton';
 import AgendaDay from '@/components/AgendaDay';
 import Card from '@/components/Card';
 import CardContainer from '@/components/CardContainer';
-import DocumentoDay from '@/components/DocumentoDay';
 import Encabezado from '@/components/Encabezado';
-import TareaDay from '@/components/TareaDay';
+import Event from '@/components/Event';
 import Title from '@/components/Title';
 import { Tab } from '@headlessui/react';
 import Image from 'next/image';
@@ -81,11 +80,16 @@ export default function Page ({params}) {
 
                     <Encabezado title='Tareas' />
                     <Title title='Junio' />
-                    <TareaDay dia='MAR' fecha='17' eventos='2' />
+                    <AgendaDay dia='Dom' fecha='22' tipo="tarea">
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
                     
                     <Encabezado title='Agenda' />
                     <Title title='Agosto' />
-                    <AgendaDay dia='Dom' fecha='22' eventos='1' />
+                    <AgendaDay dia='Dom' fecha='22' tipo="agenda">
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
 
                     <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 
@@ -93,7 +97,10 @@ export default function Page ({params}) {
                     <Tab.Panel className='bg-[#F6F8F9]'>
 
                     <Title title='Mayo' />
-                    <DocumentoDay dia='MAR' fecha='17' eventos='2' />
+                    <AgendaDay dia='Dom' fecha='22' tipo="doc">
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Reporte Sangre Morusa' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Perfil Completo' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
 
                     <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 

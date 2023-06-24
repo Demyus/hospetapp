@@ -2,6 +2,7 @@
 
 import AddButton from '@/components/AddButton';
 import AgendaDay from '@/components/AgendaDay';
+import Event from '@/components/Event';
 import Title from '@/components/Title';
 import { Tab } from '@headlessui/react';
 
@@ -29,18 +30,39 @@ export default function Page () {
                 <Tab.Panels className='pt-16'>
                     <Tab.Panel className='bg-[#F6F8F9]'>
 
-                    <Title title='Junio' />
-
-                    <AgendaDay dia='LUN' fecha='16' eventos='4' />
-                    <AgendaDay dia='MAR' fecha='17' eventos='2' />
-                    <AgendaDay dia='mie' fecha='18' eventos='3' />
-                    <AgendaDay dia='Jue' fecha='19' eventos='1' />
+                    <AgendaDay dia='LUN' fecha='16' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='MAR' fecha='17'>
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='mie' fecha='18' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='Jue' fecha='19' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
                     
                     <Title title='Agosto' />
                     
-                    <AgendaDay dia='Vie' fecha='20' eventos='3' />
-                    <AgendaDay dia='Sab' fecha='21' eventos='3' />
-                    <AgendaDay dia='Dom' fecha='22' eventos='3' />
+                    <AgendaDay dia='Vie' fecha='20' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='Sab' fecha='21' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='Dom' fecha='22' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
 
                     <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 
@@ -49,9 +71,18 @@ export default function Page () {
 
                     <Title title='Mayo' />
                     
-                    <AgendaDay dia='Vie' fecha='20' eventos='3' />
-                    <AgendaDay dia='Sab' fecha='21' eventos='3' />
-                    <AgendaDay dia='Dom' fecha='22' eventos='3' />
+                    <AgendaDay dia='Vie' fecha='20' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='Sab' fecha='21' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
+                    <AgendaDay dia='Dom' fecha='22' eventos='3' >
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am - 9:00am' usuario='Karla' liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    </AgendaDay>
 
                     <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
 

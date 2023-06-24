@@ -1,24 +1,20 @@
 import Event from "./Event";
 
-export default function AgendaDay({dia, fecha, eventos}) {
-    const cantidad = eventos;
-    const events = [];
-  
-    for (let i = 0; i < cantidad; i++) {
-      events.push(<Event key={`event${i}`} 
-      titulo='Hidratación Morusa' 
-      subtitulo='8:00am - 9:00am' 
-      usuario='Karla' 
-      liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />);
+export default function AgendaDay({dia, fecha, tipo="agenda", children}) {
+    const color = {
+        'agenda': 'hospMorado',
+        'tarea': 'hospVerde',
+        'doc': 'black',
     }
+    const type = tipo || 'agenda';
 
     return (
         <div className='flex flex-nowrap mb-3'>
-            <div className='font-bold text-hospMorado uppercase flex flex-col w-1/5'>
+            <div className={`font-bold text-${color[tipo]} uppercase flex flex-col w-1/5`}>
                 <span className=''>{dia}</span> <span className='text-2xl'>{fecha}</span>
             </div>
             <div className='w-full'>
-                {events}
+                {children}
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
 'use client';
 
 import AddButton from '@/components/AddButton';
+import AgendaDay from '@/components/AgendaDay';
+import Event from '@/components/Event';
 import Title from '@/components/Title';
-import TareaDay from '@/components/tareaDay';
-import { Tab } from '@headlessui/react';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -19,17 +19,31 @@ export default function Tareas () {
             <div className='pt-20'>
             
                <Title title='Junio' />
+                <AgendaDay dia='Dom' fecha='22' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
 
-                <TareaDay dia='LUN' fecha='16' eventos='4' />
-                <TareaDay dia='MAR' fecha='17' eventos='2' />
-                <TareaDay dia='mie' fecha='18' eventos='3' />
-                <TareaDay dia='Jue' fecha='19' eventos='1' />
+                <AgendaDay dia='Lun' fecha='23' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
+                <AgendaDay dia='Mar' fecha='24' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
+                <AgendaDay dia='Mie' fecha='25' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
                     
                 <Title title='Agosto' />
-                    
-                <TareaDay dia='Vie' fecha='20' eventos='3' />
-                <TareaDay dia='Sab' fecha='21' eventos='3' />
-                <TareaDay dia='Dom' fecha='22' eventos='3' />
+                <AgendaDay dia='Jue' fecha='26' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
+                <AgendaDay dia='Jue' fecha='26' tipo="tarea">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>    
+                
             </div>
 
             <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>

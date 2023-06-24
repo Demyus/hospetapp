@@ -1,11 +1,6 @@
 import Tarea from "./Tarea";
 
-export default function TareaDay({dia, fecha, eventos}) {
-    const events = [];
-  
-    for (let i = 0; i < eventos; i++) {
-      events.push(<Tarea key={i} />);
-    }
+export default function TareaDay({dia, fecha, children}) {
 
     return (
         <div className='flex flex-nowrap mb-3'>
@@ -13,7 +8,7 @@ export default function TareaDay({dia, fecha, eventos}) {
                 <span className=''>{dia}</span> <span className='text-2xl'>{fecha}</span>
             </div>
             <div className='w-full'>
-                {events}
+                {children}
             </div>
         </div>
     )

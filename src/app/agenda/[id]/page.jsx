@@ -1,10 +1,11 @@
 'use client'
 
 import AddButton from "@/components/AddButton";
+import AgendaDay from "@/components/AgendaDay";
 import Card from "@/components/Card";
 import CardContainer from "@/components/CardContainer";
 import Container from "@/components/Container";
-import DocumentoDay from "@/components/DocumentoDay";
+import Event from "@/components/Event";
 import Title from "@/components/Title";
 import Image from "next/image";
 import { useRouter } from "next/navigation"
@@ -51,10 +52,13 @@ export default function EditAgenda ({params}) {
             <CardContainer>
                 <h2 className="font-bold">Documentos asociados</h2>
                 <Title title='Junio' />
-                <DocumentoDay dia='LUN' fecha='16' eventos='1' />
-                <DocumentoDay dia='MAR' fecha='17' eventos='2' />
+                <AgendaDay dia='Dom' fecha='22' tipo="doc">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Reporte Sangre Morusa' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
                 <Title title='Mayo' />
-                <DocumentoDay dia='mie' fecha='18' eventos='3' />
+                <AgendaDay dia='Dom' fecha='22' tipo="doc">
+                    <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Reporte Sangre Morusa' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                </AgendaDay>
                 <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
             </CardContainer>
         </Container>

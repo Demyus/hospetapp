@@ -45,29 +45,19 @@ export default function Page ({params}) {
                     <Tab.Panel className='bg-[#F6F8F9]'>
 
                         <CardContainer>
-                            <div className="w-full">
-                                    <Image className='right-3 top-1 absolute' src={'/placeholder3.png'} alt='Foto Perfil' width={110} height={110} />
+                            <div className="flex">
+                                <div className='mr-3 mb-3 w-full max-w-[110px]'>
+                                    <Image className='block' src={'/placeholder3.png'} alt='Foto Perfil' width={110} height={110} />
+                                </div>
+                                 <div className='w-full'>
                                     <h1 className="font-bold text-xl text-hospMorado">Roquefort</h1>
-                                    <p className="text-sm"><span className="font-bold">Especie:</span> Felino</p>
-                                    <p className="text-sm"><span className="font-bold">Raza:</span> Taby</p>
-                                    <p className="text-sm"><span className="font-bold">Color:</span> Naranja</p>
-                                    <p className="text-sm"><span className="font-bold">Sexo:</span> Macho</p>
-                                <div className='flex justify-between'>
-                                    <div>
-                                        <p className="text-sm"><span className="font-bold">Peso:</span> 5 kg</p>
-                                        <p className="text-sm"><span className="font-bold">Esterilizado:</span> Sí</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-sm"><span className="font-bold">Sangre:</span> A+</p>
-                                        <p className="text-sm"><span className="font-bold">Edad:</span> 2 años</p>    
-                                    </div>                                    
-                                    <div>
-                                        <p className="text-sm"><span className="font-bold">Donador:</span> Sí</p>
+                                    <div className=''>
+                                        Felino, Taby Naranja, Macho, 2 años, 5kg, Esterilizado, A+, Donador
                                     </div>
                                 </div>
-                                <p className="text-sm"><span className="font-bold">Señas particulares:</span> Es un hermoso</p>
-                                <button onClick={edit} className="text-sm rounded-md bg-hospMorado text-white px-2 py-1 mt-2 mx-auto">Editar Perfil</button>
                             </div>
+                            <p className="text-sm"><span className="font-bold">Señas particulares:</span> Es un hermoso</p>
+                                <button onClick={edit} className="text-sm rounded-md bg-hospMorado text-white px-2 py-1 mt-2 mx-auto">Editar Perfil</button>
                         </CardContainer>
                         
                         <Card tipo='tutor' titulo='Ixchel True Orozco' subtitulo='Tutor' liga={`/tutores/${Math.floor(Math.random() * 10) + 1}`} />

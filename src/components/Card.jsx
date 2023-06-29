@@ -22,13 +22,13 @@ export default function Card ({tipo, titulo, subtitulo, liga}) {
                 {hide || <Image className="mr-2" src={`/${imagePic}.png`} width={40} height={40} alt="Nombre Paciente" /> }
                 <div>
                     <h2 className="truncate text-lg font-bold leading-4">{titulo}</h2>
-                    {hide || (<div className="text-sm mt-1">
+                    {subtitulo && (<div className="text-sm mt-1">
                         <span className="leading-4 text-slate-500">{subtitulo}</span>
                     </div>)}
                     
                 </div>
             </div>
-                <RxCaretRight className={`absolute right-2 ${hide ? 'bottom-1' : 'bottom-4'} text-slate-500 text-3xl`} />
+                <RxCaretRight className={`absolute right-2 ${ hide && !subtitulo ? 'bottom-1' : 'bottom-4'} text-slate-500 text-3xl`} />
             </Link>
         </div>
         

@@ -35,14 +35,14 @@ export default function VacunaDetail ({params}) {
                 </div>
                 <p className="text-sm"><span className="font-bold">Señas particulares:</span> Es un hermoso</p>
             </CardContainer>
-            <Encabezado title='Vacunas' />
+            <Encabezado title='Desparasitaciones' />
             <CardContainer>
-                <Card tipo='anamnesis' titulo='Triple Felina' subtitulo='Lunes 16 Marzo 2022 | Bayer' liga={`/agenda/edit/${Math.floor(Math.random() * 10) + 1}`} />
+                <Card tipo='anamnesis' titulo='Nombre Desparasitaciones' subtitulo='Lunes 16 Marzo 2022 | Bayer' liga={`/agenda/edit/${Math.floor(Math.random() * 10) + 1}`} />
                 <Card tipo='vet' titulo='Karla Ulloa' subtitulo='Administrador General' liga='/perfil' />
             </CardContainer>
             
             <CardContainer>
-                <Card tipo='anamnesis' titulo='Triple Felina' subtitulo='Lunes 18 Marzo 2023 | Bayer' liga={`/agenda/edit/${Math.floor(Math.random() * 10) + 1}`} />
+                <Card tipo='anamnesis' titulo='Nombre Medicamento' subtitulo='Lunes 18 Marzo 2023 | Bayer' liga={`/agenda/edit/${Math.floor(Math.random() * 10) + 1}`} />
                 <Card tipo='vet' titulo='Karla Ulloa' subtitulo='Administrador General' liga='/perfil' />
             </CardContainer>
 

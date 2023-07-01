@@ -106,11 +106,11 @@ export default function Page ({params}) {
                         <Encabezado title='Desparasitaciones' />
                         <Title title='Junio' />
                         <AgendaDay dia='Dom' fecha='22' tipo="tarea">
-                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/pacientes/234/desparasitaciones/${Math.floor(Math.random() * 10) + 1}`} />
                         </AgendaDay>
                         <Title title='Julio' />
                         <AgendaDay dia='Lun' fecha='23' tipo="tarea">
-                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/pacientes/234/desparasitaciones/${Math.floor(Math.random() * 10) + 1}`} />
                         </AgendaDay>
 
                         <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>
@@ -121,8 +121,8 @@ export default function Page ({params}) {
 
                         <Title title='Mayo' />
                         <AgendaDay dia='Dom' fecha='22' tipo="doc">
-                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Reporte Sangre Morusa' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
-                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Perfil Completo' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Reporte Sangre Morusa' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/pacientes/234/documentos/${Math.floor(Math.random() * 10) + 1}`} />
+                            <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Perfil Completo' subtitulo='PDF' usuario='Karla' tipo="tarea" liga={`/pacientes/234/documentos/${Math.floor(Math.random() * 10) + 1}`} />
                         </AgendaDay>
 
                         <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>

@@ -81,8 +81,8 @@ export default function Page ({params}) {
                     <Encabezado title='Tareas' />
                     <Title title='Junio' />
                     <AgendaDay dia='Dom' fecha='22' tipo="tarea">
-                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
-                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/agenda/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/tareas/${Math.floor(Math.random() * 10) + 1}`} />
+                        <Event key={`event${Math.floor(Math.random() * 10) + 1}`} titulo='Hidratación Morusa' subtitulo='8:00am' usuario='Karla' tipo="tarea" liga={`/tareas/${Math.floor(Math.random() * 10) + 1}`} />
                     </AgendaDay>
                     
                     <Encabezado title='Agenda' />

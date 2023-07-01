@@ -9,7 +9,7 @@ import Event from "@/components/Event";
 import Title from "@/components/Title";
 import { useRouter } from "next/navigation"
 
-export default function EditAgenda ({params}) {
+export default function AgendaDetail ({params}) {
     const router = useRouter();
 
     const edit = () => {
@@ -19,12 +19,12 @@ export default function EditAgenda ({params}) {
     return (
         <Container>
             <AddButton />
-            <Card tipo='anamnesis' titulo='Consulta Toto' subtitulo='Lunes 16 Marzo | 9:30 am - 10:30 am' liga='#' />
+            <Card tipo='anamnesis' titulo='Consulta Toto' subtitulo='Lunes 16 Marzo | 9:30 am - 10:30 am' liga={`/agenda/edit/${Math.floor(Math.random() * 10) + 1}`} />
             <div className="my-3">
                 <Card tipo='paciente' titulo='Toto' subtitulo='Ixchel True Orozco' liga={`/pacientes/${Math.floor(Math.random() * 10) + 1}`} />
                 <Card tipo='tutor' titulo='Ixchel True Orozco' subtitulo='Tutor' liga={`/tutores/${Math.floor(Math.random() * 10) + 1}`} />
                 <Card tipo='vet' titulo='Karla Ulloa' subtitulo='Administrador General' liga='/perfil' />
-                <Card tipo='anamnesis' titulo='Anamnesis' subtitulo='' liga='#' />
+                <Card tipo='anamnesis' titulo='Anamnesis' subtitulo='' liga='/pacientes/23/anamnesis/55' />
             </div>
             <CardContainer>
                 <div className="">

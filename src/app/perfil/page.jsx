@@ -7,6 +7,7 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {TbUser} from 'react-icons/tb';
 import {BsTelephone} from 'react-icons/bs';
 import {MdVpnKey} from 'react-icons/md';
+import CardContainer from "@/components/CardContainer";
 
 export default function Perfil () {
     const router = useRouter();
@@ -24,8 +25,8 @@ export default function Perfil () {
             <div className="relative max-w-[158px] max-h-[158px] mx-auto mb-6">
                 <Image className="mt-4 mx-auto" src='/placeholder2.png' width={156} height={156} alt="Foto" />
             </div>
-            
-            <div className="max-w-[290px] mx-auto">
+            <CardContainer>
+            <div className="max-w-[290px] mx-auto py-2">
                 <div className="text-xl mb-3">
                     <TbUser className="inline -mt-2" /> Karla Ulloa
                 </div>
@@ -43,7 +44,7 @@ export default function Perfil () {
                     <button onClick={gotoUsers} className="rounded-md bg-hospVerde text-white px-4 py-2">Usuarios</button>
                 </div>
             </div>
-            
+            </CardContainer>
 
 
         </div>

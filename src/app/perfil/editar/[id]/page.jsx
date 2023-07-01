@@ -8,6 +8,8 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {TbUser} from 'react-icons/tb';
 import {BsTelephone} from 'react-icons/bs';
 import {MdVpnKey} from 'react-icons/md';
+import CardContainer from "@/components/CardContainer";
+import Card from "@/components/Card";
 
 export default function EditProfile ({params}) {
     const router = useRouter();
@@ -30,11 +32,12 @@ export default function EditProfile ({params}) {
                 <Image className="mt-4 mx-auto" src='/placeholder2.png' width={156} height={156} alt="Foto" />
             </div>
             
+        <CardContainer>
             <div className="max-w-[290px] mx-auto">
                 <div className="text-base font-bold mb-3">
-                    <TbUser className="inline -mt-2" /> Nombre {userId}
+                    <TbUser className="inline -mt-2" /> Nombre
                     <input 
-                        className="w-full font-normal px-2 py-1 rounded-md border-slate-400 focus:border-hospMorado focus:ring-hospMorado " 
+                        className="w-full font-normal px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
                         name="nombre" 
                         id="nombre" 
                         placeholder="Nombre Apellido" 
@@ -43,7 +46,7 @@ export default function EditProfile ({params}) {
                 <div className="text-base font-bold mb-3">
                     <AiOutlineMail className="inline -mt-2" /> Correo
                     <input 
-                        className="w-full font-normal px-2 py-1 rounded-md border-slate-400 focus:border-hospMorado focus:ring-hospMorado " 
+                        className="w-full font-normal px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
                         name="correo" 
                         id="correo" 
                         placeholder="usuario@correo.com" 
@@ -52,13 +55,13 @@ export default function EditProfile ({params}) {
                 <div className="text-base font-bold mb-3">
                     <BsTelephone className="inline -mt-2" /> Teléfono <br></br>
                     <input 
-                        className="w-16 mr-1 font-normal px-2 py-1 rounded-md border-slate-400 focus:border-hospMorado focus:ring-hospMorado " 
+                        className="w-16 mr-1 font-normal px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
                         name="lada" 
                         id="lada" 
                         placeholder="(646)" 
                         type="tel" />
                     <input 
-                        className=" font-normal px-2 py-1 rounded-md border-slate-400 focus:border-hospMorado focus:ring-hospMorado " 
+                        className=" font-normal px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
                         name="tel" 
                         id="tel" 
                         placeholder="1765692" 
@@ -67,7 +70,7 @@ export default function EditProfile ({params}) {
                 <div className="text-base font-bold mb-3">
                     <MdVpnKey className="inline -mt-2" /> Tipo de Cuenta
                     <span className="block font-normal ml-5 my-2">
-                        <input className="mr-2" type="radio" name="tipoCuenta" id="tipoCuenta1" />
+                        <input className="mr-2" type="radio" name="tipoCuenta" id="tipoCuenta1" defaultChecked />
                         <label for="tipoCuenta1">Administrador General</label>
                      </span>
                     <span className="block font-normal ml-5 mb-2">
@@ -87,8 +90,9 @@ export default function EditProfile ({params}) {
                     <button onClick={gotoProfile} className="rounded-md bg-hospMorado text-white px-4 py-2 mr-3">Cancelar</button>
                     <button onClick={gotoUsers} className="rounded-md bg-hospVerde text-white px-4 py-2">Grabar</button>
                 </div>
+               
             </div>
-            
+            </CardContainer>
 
 
         </div>

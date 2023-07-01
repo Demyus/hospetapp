@@ -11,14 +11,14 @@ export default function Pacientes () {
             </div>
 
             <div className="pt-16">
-                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Nombre Paciente' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Roquefort' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Morusa' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Kinny' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Sofi' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Ivette' subtitulo='Nombre del Tutor' liga='#' />
-                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='#' />
+                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Nombre Paciente' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Roquefort' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Morusa' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Kinny' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Sofi' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Ivette' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
+                <Card tipo='paciente' titulo='Umi' subtitulo='Nombre del Tutor' liga='/pacientes/23' />
             </div>
 
             <div className='pb-40 pt-5 text-center'><h3>Fin de Resultados</h3></div>

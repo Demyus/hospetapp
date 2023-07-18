@@ -46,9 +46,9 @@ export default function EditAgenda ({params}) {
                     Peso
                     <input 
                         className="w-full font-normal mb-3 px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
-                        name="buscadorTutor" 
-                        id="buscadorTutor" 
-                        placeholder="Buscar Paciente" 
+                        name="pesoPaciente" 
+                        id="pesoPaciente" 
+                        placeholder="" 
                         type="text" />                    
                 </div>
             </CardContainer>
@@ -63,7 +63,7 @@ export default function EditAgenda ({params}) {
 
             <CardContainer>
                 <div className="text-base font-bold">
-                    Atendió                    
+                    Atendió
                     <input 
                         className="w-full font-normal mb-3 px-2 py-1 rounded-sm border-slate-300 focus:border-hospMorado focus:ring-hospMorado " 
                         name="buscadorTutor" 

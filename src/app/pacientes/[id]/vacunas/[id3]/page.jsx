@@ -54,7 +54,7 @@ export default function VacunaDetail ({params}) {
                     </p>
                 </div>
             </CardContainer>
-            
+            <div className="py-16"></div>
         </Container>
     )
 }

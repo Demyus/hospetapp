@@ -11,11 +11,6 @@ import React from 'react';
 const manrope = Manrope({ subsets: ['latin'] })
 const inter = Inter({ subsets: ['latin'] })
 
-// export const metadata = {
-//   title: 'Hospetapp',
-//   description: 'Test App',
-// }
-
 export default function RootLayout({ children }) {
 
   return (
